@@ -58,7 +58,7 @@ If your exports are failing, simply add the tool's folder to your antivirus excl
 3. Scroll down to *Exclusions* and click **Add or remove exclusions**.
 4. Click **Add an exclusion** > **Folder**, and select the folder where this tool is located.
 
-*(Note: While you can temporarily disable Tamper/Real-time protection to force an export, adding a folder exclusion is safer and only needs to be done once!)*
+*(Note: While you can temporarily disable Tamper/Real-time protection to force an export, adding a folder exclusion is safer and only needs to be done once.)*
 
 ## 📄 License
 This software is provided under a custom Proprietary Freeware License. It is strictly for personal, non-commercial use. Modification or creation of derivative works is prohibited. Please see the LICENSE.txt file for complete details.
