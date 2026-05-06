@@ -6,6 +6,18 @@ A specialized GUI utility developed by **KBDStudios** strictly designed to appen
 
 **This tool does not compress, re-encode, or alter your original file data.** It exclusively pads files. This is designed for binary modification workflows where internal pointers require compiled file blocks to meet exact byte-size requirements. By mathematically inflating a smaller modified file to match the original file's size, you prevent internal structure shifts and subsequent engine crashes.
 
+## 💻 **System Requirements & Architecture:**
+
+**Pre-compiled Release (.exe):**
+The standalone release build is compiled specifically for **Client Windows** environments (x64/x86 architecture). It is fully compatible with standard Intel and AMD processors running:
+* Windows 7
+* Windows 10
+* Windows 11
+*(Note: If you are using a newer ARM-based Windows device, Windows will automatically handle running the executable via its built-in emulation.)*
+
+**Source Code (Python):**
+If you want to use this on **macOS**, **Linux**, or other operating systems, you can simply download the source code and run the Python scripts natively using your own Python environment.
+
 ## ✨ Features
 
 * **Strict End-of-File Padding:** Safely injects null bytes (`\x00`) at the end of any file without touching the original data structure.
@@ -36,6 +48,17 @@ For developers or users running the raw Python script:
        pip install pillow
 
 4. Run the `UniversalFilePadderViewer.pyw` script.
+
+## ⚠️ **File Exports & Windows Security:**
+Windows "Tamper Protection" (often tied to **Real-time protection** in Client Windows 7/10/11) or third-party antivirus software may sometimes block the tool from exporting files.
+
+If your exports are failing, simply add the tool's folder to your antivirus exclusions:
+1. Open **Windows Security** > **Virus & threat protection**.
+2. Under *Virus & threat protection settings*, click **Manage settings**.
+3. Scroll down to *Exclusions* and click **Add or remove exclusions**.
+4. Click **Add an exclusion** > **Folder**, and select the folder where this tool is located.
+
+*(Note: While you can temporarily disable Tamper/Real-time protection to force an export, adding a folder exclusion is safer and only needs to be done once!)*
 
 ## 📄 License
 This software is provided under a custom Proprietary Freeware License. It is strictly for personal, non-commercial use. Modification or creation of derivative works is prohibited. Please see the LICENSE.txt file for complete details.
