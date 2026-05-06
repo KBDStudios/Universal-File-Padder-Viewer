@@ -1,17 +1,19 @@
+<img width="1363" height="674" alt="Demonstration Universal-File-Padder-Viewer" src="https://github.com/user-attachments/assets/e57a903c-110a-4819-bb7b-2109ad2a5edf" />
+
 # Universal File Padder & Viewer
 
-A specialized utility developed by **KBDStudios** that allows users to safely append exact amounts of binary null padding (`\x00`) to the end of any file. 
+A specialized GUI utility developed by **KBDStudios** strictly designed to append exact amounts of binary null padding (`\x00`) to the end of any file. 
 
-This tool is specifically designed for binary modification workflows (such as game development) where internal pointers require compiled file blocks to meet exact byte-size requirements. By mathematically inflating a smaller modified file to match the original file's size, you prevent internal structure shifts and subsequent engine crashes.
+**This tool does not compress, re-encode, or alter your original file data.** It exclusively pads files. This is designed for binary modification workflows where internal pointers require compiled file blocks to meet exact byte-size requirements. By mathematically inflating a smaller modified file to match the original file's size, you prevent internal structure shifts and subsequent engine crashes.
 
 ## ✨ Features
 
-* **Universal File Support:** Inject null bytes into any file extension safely.
+* **Strict End-of-File Padding:** Safely injects null bytes (`\x00`) at the end of any file without touching the original data structure.
 * **Target Size Matching:** Right-click a loaded file and select an original game asset to automatically calculate and append the exact padding needed to perfectly match their sizes.
 * **Batch Processing:** Select multiple files and apply a uniform padding amount to all of them at once. 
-* **Dynamic Size Conversions:** Input and view padding sizes dynamically across Bytes, KB, MB, and GB (supports up to a 5GB absolute limit per file).
-* **Live Image Previews:** If processing supported UI textures (PNG, JPG, BMP, TIFF, TGA, WEBP, AVIF, HEIC/HEIF), view them directly in the scrollable gallery.
-* **Threaded Animation Playback:** Fully supports viewing and playing animated formats (GIF, WEBP) without freezing the UI.
+* **Flexible Padding Units:** Input and view padding amounts natively across Bytes, KB, MB, and GB (supports up to a 5GB absolute padding limit per file).
+* **Live Image Previews:** If you are padding supported UI textures (PNG, JPG, BMP, TIFF, TGA, WEBP, AVIF, GIF), you can view them directly in the scrollable gallery.
+* **Threaded Animation Playback:** Play animated formats (GIF, WEBP) directly in the preview gallery without freezing the UI.
 * **Full-Resolution Viewer:** Double-click any loaded image to open an advanced viewer with zoom controls and a hover magnifier.
 
 ## 🚀 Installation & Usage
@@ -32,10 +34,6 @@ For developers or users running the raw Python script:
 3. Install the required image processing library by opening your command prompt and typing:
 
        pip install pillow
-
-   **(Optional)** If you want support for Apple's HEIC/HEIF image formats, install the supplementary plugin:
-
-       pip install pillow-heif
 
 4. Run the `UniversalFilePadderViewer.pyw` script.
 
